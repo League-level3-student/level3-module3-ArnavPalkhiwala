@@ -9,7 +9,17 @@ public class BackwardsString extends SpecialString {
 	@Override
 	public String funkifyText(String s) {
 		
-		return "";
+		String empty = "";
+		
+		for (int i = s.length() - 1; i >= 0; i--) {
+			
+			empty += s.charAt(i);
+			
+		
+			
+		}
+		
+		return empty;
 	}
 
 }

@@ -1,6 +1,6 @@
 package _00_Text_Funkifier;
 
-public class MixedCapsString extends SpecialString{
+public class MixedCapsString extends SpecialString {
 
 	public MixedCapsString(String s) {
 		super(s);
@@ -8,8 +8,25 @@ public class MixedCapsString extends SpecialString{
 
 	@Override
 	public String funkifyText(String s) {
-		
-		return "";
+
+		String empty = "";
+
+		for (int i = 0; i < s.length(); i++) {
+
+			if (i % 2 == 0) {
+
+				empty += s.substring(i, i + 1).toUpperCase();
+
+			}
+
+			else {
+
+				empty += s.substring(i, i + 1).toLowerCase();
+			}
+
+		}
+
+		return empty;
 	}
 
 }
