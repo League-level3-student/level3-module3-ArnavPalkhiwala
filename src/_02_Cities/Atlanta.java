@@ -4,11 +4,16 @@ public class Atlanta extends City{
 
 	public Atlanta(int population, double growthRate) {
 		super(population, growthRate);
+		this.population = population;
+		this.growthRate = growthRate;
 	}
 
 	@Override
 	double getAnnualTaxes() {
-		return 0;
+		
+		growthRate = growthRate * 2;
+		double getAnnualTaxes = population * growthRate; 
+		return getAnnualTaxes;
 	}
 
 }
